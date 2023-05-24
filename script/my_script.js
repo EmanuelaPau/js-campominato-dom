@@ -12,6 +12,9 @@ function startNewGame() {
     const myGrid = document.getElementById('my_grid');
     // console.log(`My grid element is ${myGrid}`);
 
+    // genero le bombe 
+    let myBombs = getRandomUniqueNumber(1, 100, 16);
+
     // reset 
     myGrid.innerHTML = "";
     // I add grid border using a class 
@@ -19,13 +22,17 @@ function startNewGame() {
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
-        appendMyCell.innerHTML = '<p>' + i + '</p>';
+        appendMyCell.innerHTML = '<p> </p>';
 
         // console.log(i);
 
         appendMyCell.addEventListener('click', function () {
             console.log(i);
-            appendMyCell.classList.toggle('selected');
+            if (myBombs.includes(i)) {
+                appendMyCell.classList.toggle('exploded');
+            } else {
+                appendMyCell.classList.toggle('selected');
+            }
         })
 
         myGrid.appendChild(appendMyCell);
