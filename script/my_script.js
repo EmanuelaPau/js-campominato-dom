@@ -22,18 +22,18 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
     myGrid.classList.add('grid-border');
 
     let yourScore = 0;
+    // Verify if game continue 
     let isBombUnexploded = true;
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p> </p>';
 
-        // console.log(i);
+        appendMyCell.addEventListener('click', function () {
 
-        if (isBombUnexploded == true) {
-            appendMyCell.addEventListener('click', function () {
-                console.log(i);
+            if (isBombUnexploded === true) {
                 yourScore = yourScore + 1;
+
                 if (myBombs.includes(i)) {
                     appendMyCell.classList.toggle('exploded');
                     yourScore = yourScore - 1;
@@ -47,12 +47,14 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
 
                 if (yourScore >= maxNumber - elementsNumber) {
                     console.log(`you won, your score is: ${yourScore}`);
-                    isBombUnexploded = false;
                 }
-            }, { once: true });
-        }
+            }
+
+        }, { once: true });
+
         myGrid.appendChild(appendMyCell);
     }
+
 }
 
 /**
@@ -110,11 +112,6 @@ function getRandomUniqueNumber(minNumber, maxNumber, elementsNumber) {
 
     return numbersList;
 }
-
-
-
-console.log(getRandomUniqueNumber(1, 20, 16));
-
 
 // AGGIUNGO LE BOMBE ALLA CRIGLIA 
 // inizio gioco 
