@@ -22,9 +22,8 @@ function startNewGame() {
     // I add grid border using a class 
     myGrid.classList.add('grid-border');
 
-
-    let yourScore = 0;
     let cellNumber = 0;
+    let yourScore = 0;
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
@@ -34,22 +33,21 @@ function startNewGame() {
 
         appendMyCell.addEventListener('click', function () {
             console.log(i);
-            cellNumber = i;
-            yourScore = yourScore + cellNumber;
+            yourScore = yourScore + 1;
             if (myBombs.includes(i)) {
                 appendMyCell.classList.toggle('exploded');
 
             } else {
                 appendMyCell.classList.toggle('selected');
-                console.log(`your score is ${yourScore}`);
             }
 
             if (appendMyCell.classList.contains('exploded')) {
-                console.log(`you lost, your score is ${yourScore - cellNumber}`);
+                console.log(`you lost, your score is: ${yourScore - 1}`);
+            }
+            else {
+                console.log(`your score is: ${yourScore}`)
             }
         })
-
-
 
         myGrid.appendChild(appendMyCell);
     }
