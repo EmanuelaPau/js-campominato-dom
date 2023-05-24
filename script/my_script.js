@@ -17,7 +17,7 @@ function startNewGame() {
     // I add grid border using a class 
     myGrid.classList.add('grid-border');
 
-    for (i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p>' + i + '</p>';
 
