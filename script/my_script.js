@@ -57,3 +57,5 @@ function generateRandomNumber(maxNumber, minNumber) {
 
     return myRandomNumber;
 }
+
+console.log(generateRandomNumber(5, 1));
