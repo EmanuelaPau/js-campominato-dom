@@ -1,0 +1,114 @@
+header {
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+}
+
+main {
+    background-color: #7fffd4;
+    height: calc(100vh - 200px);
+    width: 100%;
+    padding: 55px;
+    overflow: scroll;
+}
+
+footer {
+    height: 100px;
+    padding: 1rem 2rem;
+    font-size: 1.85rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer p a {
+    color: #73439f;
+}
+
+.my_title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+img.boolean-logo {
+    width: 55px;
+}
+
+.playbutton {
+    font-size: 1.4rem;
+    width: 140px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.select-difficulty {
+    font-size: 1.4rem;
+    width: 140px;
+    border-radius: 10px;
+}
+
+div.grid .cell.hard {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+div.grid .cell.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+div.grid .cell.easy {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+/* border: 1px solid grey; */
+
+div.grid {
+    background-color: #c0c0c0;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    /* background-color: blueviolet; */
+
+}
+
+.grid-border {
+    /* border: 1px solid black; */
+}
+
+div.grid .cell {
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 5px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    cursor: pointer;
+}
+
+div.grid .cell p {
+    text-align: center;
+    font-size: 1.5rem;
+    /* line-height: 100px; */
+    margin-bottom: 0;
+}
+
+div.cell.selected {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #828282;
+}
+
+div.cell.exploded {
+    background-color: red;
+}
+
+div.cell.mine {
+    background-image: url(../img/mine.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
