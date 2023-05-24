@@ -23,6 +23,8 @@ function startNewGame() {
     myGrid.classList.add('grid-border');
 
 
+    let yourScore = 0;
+    let cellNumber = 0;
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
@@ -32,14 +34,18 @@ function startNewGame() {
 
         appendMyCell.addEventListener('click', function () {
             console.log(i);
+            cellNumber = i;
+            yourScore = yourScore + cellNumber;
             if (myBombs.includes(i)) {
                 appendMyCell.classList.toggle('exploded');
+
             } else {
                 appendMyCell.classList.toggle('selected');
+                console.log(`your score is ${yourScore}`);
             }
 
             if (appendMyCell.classList.contains('exploded')) {
-                console.log('you lost');
+                console.log(`you lost, your score is ${yourScore - cellNumber}`);
             }
         })
 
