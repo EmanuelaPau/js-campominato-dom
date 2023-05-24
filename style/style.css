@@ -1,0 +1,70 @@
+header {
+    height: 145px;
+    width: 100%;
+    padding: 20px;
+}
+
+main {
+    background-color: #7fffd4;
+    width: 100%;
+    padding: 110px;
+}
+
+footer {
+    padding: 1.8rem 2rem;
+    font-size: 1.85rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer p a {
+    color: #73439f;
+}
+
+.my_title {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+img.boolean-logo {
+    width: 75px;
+}
+
+.playbutton {
+    font-size: 1.4rem;
+    width: 140px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+div.grid {
+    margin: 0 auto;
+    width: 1000px;
+    height: 1000px;
+    /* background-color: blueviolet; */
+
+}
+
+.grid-border {
+    border: 1px solid black;
+}
+
+div.grid .cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+div.grid .cell p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 100px;
+    margin-bottom: 0;
+}
+
+div.cell.selected {
+    background-color: lightskyblue;
+}
