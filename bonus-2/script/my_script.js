@@ -49,6 +49,7 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
     // Verify if game continue 
     let isBombUnexploded = true;
     let displayBombs = false;
+    let yourTextPoints = document.getElementById('your-points-text');
 
     for (let i = 1; i <= maxNumber; i++) {
         const appendMyCell = createCellElement("div", "cell");
@@ -69,7 +70,7 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
                     displayBombs = true;
                     // console.log(displayBombs);
                     isBombUnexploded = false;
-
+                    playButton.classList.add('dead-playbutton');
                 } else {
                     appendMyCell.classList.toggle('selected');
                 }
@@ -78,6 +79,7 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
                     console.log(`you won, your score is: ${yourScore}`);
                     isBombUnexploded = false;
                 }
+                yourTextPoints.innerHTML = yourScore;
             }
 
             // if (displayBombs === true) {

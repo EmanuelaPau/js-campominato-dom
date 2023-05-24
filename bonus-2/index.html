@@ -15,38 +15,54 @@
         <!-- FONT AWESOME 6.4.0 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+        <!-- Orbitron -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet"> 
+
+
         <!-- FONT  -->
         <!-- FAVICON -->
     </head>
 
     <body>
-        <header class="d-flex justify-content-between align-items-center">
+        <header class="d-flex justify-content-between align-items-center ">
                 <div class="d-flex align-items-center">
                     <img class="boolean-logo me-4" src="img/Logo.png" alt="Boolean logo">
                     <h1  class="my_title">Campo Minato</h1>
                 </div>
-                <div class="d-flex align-items-center">
-                    <div class="custom-select select-difficulty" style="width:200px;">
-                        <select class="">
+        </header>
+        <main class="my_main d-flex justify-content-center align-items-center">
+            <div class="minesweeper-container d-flex justify-content-center flex-wrap">
+                <div class="my_minesweeper-header d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="my_points-container d-flex align-items-center justify-content-center">
+                        <p class="my_points" >
+                            000
+                        </p>
+                        <span id="your-points-text">00</span>
+                    </div>
+                    <button class="playbutton"></button>
+                    <div class="custom-select my_selection-container">
+                        <select class="select-difficulty">
                           <option value="0">Select difficulty:</option>
                           <option class="difficulty-hard" value="1">Hard</option>
                           <option class="difficulty-medium" value="2">Medium</option>
                           <option class="difficulty-easy" value="3">Easy</option>
                         </select>
                       </div>
-                    <button class="playbutton">Play</button>
                 </div>
-        </header>
-        <main class="my_main">
-            <div id="my_grid" class="grid d-flex flex-wrap">
+                <div class="my_grid-container d-flex align-items-center justify-content-between">
+                    <div id="my_grid" class="grid d-flex flex-wrap">
 
+                    </div>
+                </div>
             </div>
         </main>
-        <footer>
+        <!-- <footer>
             <p>
                 Made with &hearts; by <a href="#">Boolean</a>
             </p>
-        </footer>
+        </footer> -->
         <!-- JS  -->
         <script type="text/javascript" src="script/my_script.js"></script>
     </body>
