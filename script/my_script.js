@@ -22,16 +22,17 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
     myGrid.classList.add('grid-border');
 
     let yourScore = 0;
+    let isBombUnexploded = true;
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p> </p>';
 
         // console.log(i);
-        let isBombUnexploded = true;
 
         if (isBombUnexploded == true) {
             appendMyCell.addEventListener('click', function () {
+                once: true
                 console.log(i);
                 yourScore = yourScore + 1;
                 if (myBombs.includes(i)) {
