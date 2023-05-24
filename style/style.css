@@ -6,14 +6,15 @@ header {
 
 main {
     background-color: #7fffd4;
-    /* height: calc(100vw - 145px - 100px); */
+    height: calc(100vh - 200px);
     width: 100%;
     padding: 55px;
+    overflow: scroll;
 }
 
 footer {
     height: 100px;
-    padding: 1.8rem 2rem;
+    padding: 1rem 2rem;
     font-size: 1.85rem;
 }
 
@@ -43,8 +44,8 @@ img.boolean-logo {
 
 div.grid {
     margin: 0 auto;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     /* background-color: blueviolet; */
 
 }
