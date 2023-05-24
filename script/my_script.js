@@ -22,7 +22,7 @@ function startNewGame() {
         appendMyCell.innerHTML = '<p>' + i + '</p>'
 
         appendMyCell.addEventListener('click', function () {
-            console.log(i + 1);
+            console.log(i);
             appendMyCell.classList.toggle('selected');
         })
 

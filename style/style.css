@@ -1,16 +1,18 @@
 header {
-    height: 145px;
+    height: 100px;
     width: 100%;
     padding: 20px;
 }
 
 main {
     background-color: #7fffd4;
+    /* height: calc(100vw - 145px - 100px); */
     width: 100%;
-    padding: 110px;
+    padding: 55px;
 }
 
 footer {
+    height: 100px;
     padding: 1.8rem 2rem;
     font-size: 1.85rem;
 }
@@ -24,12 +26,12 @@ footer p a {
 }
 
 .my_title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 img.boolean-logo {
-    width: 75px;
+    width: 55px;
 }
 
 .playbutton {
@@ -41,8 +43,8 @@ img.boolean-logo {
 
 div.grid {
     margin: 0 auto;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     /* background-color: blueviolet; */
 
 }
@@ -52,6 +54,9 @@ div.grid {
 }
 
 div.grid .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
@@ -60,11 +65,15 @@ div.grid .cell {
 
 div.grid .cell p {
     text-align: center;
-    font-size: 2rem;
-    line-height: 100px;
+    font-size: 1.5rem;
+    /* line-height: 100px; */
     margin-bottom: 0;
 }
 
 div.cell.selected {
     background-color: lightskyblue;
+}
+
+div.cell.exploded {
+    background-color: red;
 }
