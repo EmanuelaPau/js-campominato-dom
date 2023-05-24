@@ -9,6 +9,12 @@ playButton.addEventListener(('click'), function () {
 // I create a function that starts new game 
 function startNewGame() {
 
+    let resetTextPoints = document.getElementById('your-points-text');
+
+    playButton.classList.remove('dead-playbutton');
+    resetTextPoints.innerHTML = 00;
+    // yourTextPoints.innerHTML = 00;
+
     const difficultySelector = document.querySelector('select');
 
     if (difficultySelector.value == '1') {
@@ -79,7 +85,8 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
                     console.log(`you won, your score is: ${yourScore}`);
                     isBombUnexploded = false;
                 }
-                yourTextPoints.innerHTML = yourScore;
+
+
             }
 
             // if (displayBombs === true) {
@@ -87,7 +94,9 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
             //     appendMyCell.classList.add('mine');
             // }
 
+            yourTextPoints.innerHTML = yourScore;
         }, { once: true });
+
 
 
         myGrid.appendChild(appendMyCell);
