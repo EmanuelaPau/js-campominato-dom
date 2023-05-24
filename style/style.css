@@ -42,6 +42,29 @@ img.boolean-logo {
     border: 1px solid grey;
 }
 
+.select-difficulty {
+    font-size: 1.4rem;
+    width: 140px;
+    border-radius: 10px;
+}
+
+.hard {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.easy {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+/* border: 1px solid grey; */
+
 div.grid {
     margin: 0 auto;
     width: 600px;
