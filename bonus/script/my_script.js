@@ -7,27 +7,53 @@ playButton.addEventListener(('click'), function () {
 });
 
 // I create a function that starts new game 
-function startNewGame(minNumber, maxNumber, elementsNumber) {
+function startNewGame() {
 
+    const difficultySelector = document.querySelector('select');
+
+    if (difficultySelector.value == '1') {
+        // alert('hard');
+        createGridElement(1, 100, 16, 'hard')
+
+    } else if (difficultySelector.value == '2') {
+        // alert('medium');
+        createGridElement(1, 81, 8, 'medium')
+    } else if (difficultySelector.value == '3') {
+        // alert('easy');
+        createGridElement(1, 49, 5, 'easy')
+    }
+}
+
+/**
+ * Function that creates a grid of cells
+ * @param minNumber minimum number of random number that has to be determined
+ * @param maxNumber number of cells and maximum number of random number that has to be determined
+ * @param elementsNumber number of bombs that will be generated
+ * @param classToAdd class to add when you determine thetype of difficulty of the gamw
+ */
+
+function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
     // I take my grid 
     const myGrid = document.getElementById('my_grid');
-    // console.log(`My grid element is ${myGrid}`);
-
-    // genero le bombe 
-    let myBombs = getRandomUniqueNumber(minNumber, maxNumber, elementsNumber);
-
     // reset 
     myGrid.innerHTML = "";
+
+    // Add bombs 
+    let myBombs = getRandomUniqueNumber(minNumber, maxNumber, elementsNumber);
+    console.log(myBombs);
+
     // I add grid border using a class 
     myGrid.classList.add('grid-border');
 
+    // Add score variable 
     let yourScore = 0;
     // Verify if game continue 
     let isBombUnexploded = true;
 
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= maxNumber; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p> </p>';
+        appendMyCell.classList.add(classToAdd);
 
         appendMyCell.addEventListener('click', function () {
 
@@ -54,14 +80,7 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
 
         myGrid.appendChild(appendMyCell);
     }
-
 }
-
-// function createGridElement(numCells, classToAdd) {
-//     for (let i = 1; i <= numCells; i++) {
-
-//     }
-// }
 
 
 /**
@@ -90,8 +109,6 @@ function generateRandomNumber(maxNumber, minNumber) {
     return myRandomNumber;
 }
 
-console.log(generateRandomNumber(5, 1));
-
 /**
  * Function that generates random numbers all different between them
  * @param {*} minNumber minimum number to generate
@@ -119,3 +136,5 @@ function getRandomUniqueNumber(minNumber, maxNumber, elementsNumber) {
 
     return numbersList;
 }
+
+console.log(getRandomUniqueNumber(1, 10, 5))
