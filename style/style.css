@@ -75,5 +75,8 @@ div.cell.selected {
 }
 
 div.cell.exploded {
-    background-color: red;
+    /* background-color: red; */
+    background-image: url(../img/bomb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
