@@ -8,6 +8,8 @@ playButton.addEventListener(('click'), function () {
 
 // I create a function that starts new game 
 function startNewGame() {
+    let isBombUnexploded = true;
+
     // I take my grid 
     const myGrid = document.getElementById('my_grid');
     // console.log(`My grid element is ${myGrid}`);
@@ -19,6 +21,8 @@ function startNewGame() {
     myGrid.innerHTML = "";
     // I add grid border using a class 
     myGrid.classList.add('grid-border');
+
+
 
     for (let i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
@@ -33,7 +37,13 @@ function startNewGame() {
             } else {
                 appendMyCell.classList.toggle('selected');
             }
+
+            if (appendMyCell.classList.contains('exploded')) {
+                console.log('you lost');
+            }
         })
+
+
 
         myGrid.appendChild(appendMyCell);
     }
@@ -107,3 +117,4 @@ console.log(getRandomUniqueNumber(1, 20, 16));
 // confronto i numeri della griglia ai numeri della lista : lista.includes numero griglia 
 // se la griglia non include i numeri aggiungo il colore blu quando premo 
 // se la griglia include il numero aggiungo il colore rosso quando premo 
+
