@@ -19,7 +19,9 @@ function startNewGame() {
 
     for (i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
-        appendMyCell.innerHTML = '<p>' + i + '</p>'
+        appendMyCell.innerHTML = '<p>' + i + '</p>';
+
+        // console.log(i);
 
         appendMyCell.addEventListener('click', function () {
             console.log(i);
@@ -40,4 +42,18 @@ function createCellElement(tagName, className) {
     const myCell = document.createElement(tagName);
     myCell.className += className;
     return myCell;
+}
+
+
+/**
+ * A function that generate a random number between a given max and minimum number
+ * @param maxNumber your max number you want to get 
+ * @param minNumber your min number you want to get 
+ * @returns  a random number between maxNumber and minNumber
+ */
+
+function generateRandomNumber(maxNumber, minNumber) {
+    const myRandomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
+
+    return myRandomNumber;
 }
