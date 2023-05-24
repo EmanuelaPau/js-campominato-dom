@@ -112,14 +112,3 @@ function getRandomUniqueNumber(minNumber, maxNumber, elementsNumber) {
 
     return numbersList;
 }
-
-// AGGIUNGO LE BOMBE ALLA CRIGLIA 
-// inizio gioco 
-// creo griglia 
-// creo cella 
-// alla cella associo un numero che e' i 
-// creo una serie di numeri random
-// confronto i numeri della griglia ai numeri della lista : lista.includes numero griglia 
-// se la griglia non include i numeri aggiungo il colore blu quando premo 
-// se la griglia include il numero aggiungo il colore rosso quando premo 
-
