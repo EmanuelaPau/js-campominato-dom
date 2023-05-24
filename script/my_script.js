@@ -3,26 +3,24 @@ const playButton = document.querySelector('.playbutton');
 
 // Add event listener connected to playButton that start my game 
 playButton.addEventListener(('click'), function () {
-    startNewGame();
+    startNewGame(1, 100, 16);
 });
 
 // I create a function that starts new game 
-function startNewGame() {
-    let isBombUnexploded = true;
+function startNewGame(minNumber, maxNumber, elementsNumber) {
 
     // I take my grid 
     const myGrid = document.getElementById('my_grid');
     // console.log(`My grid element is ${myGrid}`);
 
     // genero le bombe 
-    let myBombs = getRandomUniqueNumber(1, 100, 16);
+    let myBombs = getRandomUniqueNumber(minNumber, maxNumber, elementsNumber);
 
     // reset 
     myGrid.innerHTML = "";
     // I add grid border using a class 
     myGrid.classList.add('grid-border');
 
-    let cellNumber = 0;
     let yourScore = 0;
 
     for (let i = 1; i <= 100; i++) {
@@ -30,25 +28,29 @@ function startNewGame() {
         appendMyCell.innerHTML = '<p> </p>';
 
         // console.log(i);
+        let isBombUnexploded = true;
 
-        appendMyCell.addEventListener('click', function () {
-            console.log(i);
-            yourScore = yourScore + 1;
-            if (myBombs.includes(i)) {
-                appendMyCell.classList.toggle('exploded');
+        if (isBombUnexploded == true) {
+            appendMyCell.addEventListener('click', function () {
+                console.log(i);
+                yourScore = yourScore + 1;
+                if (myBombs.includes(i)) {
+                    appendMyCell.classList.toggle('exploded');
+                    yourScore = yourScore - 1;
+                    console.log(`you lost, your score is: ${yourScore}`);
+                    // appendMyCell.disabled = true;
+                    isBombUnexploded = false;
 
-            } else {
-                appendMyCell.classList.toggle('selected');
-            }
+                } else {
+                    appendMyCell.classList.toggle('selected');
+                }
 
-            if (appendMyCell.classList.contains('exploded')) {
-                console.log(`you lost, your score is: ${yourScore - 1}`);
-            }
-            else {
-                console.log(`your score is: ${yourScore}`)
-            }
-        })
-
+                if (yourScore >= maxNumber - elementsNumber) {
+                    console.log(`you won, your score is: ${yourScore}`);
+                    isBombUnexploded = false;
+                }
+            })
+        }
         myGrid.appendChild(appendMyCell);
     }
 }
@@ -108,6 +110,8 @@ function getRandomUniqueNumber(minNumber, maxNumber, elementsNumber) {
 
     return numbersList;
 }
+
+
 
 console.log(getRandomUniqueNumber(1, 20, 16));
 
