@@ -32,7 +32,6 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
 
         if (isBombUnexploded == true) {
             appendMyCell.addEventListener('click', function () {
-                once: true
                 console.log(i);
                 yourScore = yourScore + 1;
                 if (myBombs.includes(i)) {
@@ -50,7 +49,7 @@ function startNewGame(minNumber, maxNumber, elementsNumber) {
                     console.log(`you won, your score is: ${yourScore}`);
                     isBombUnexploded = false;
                 }
-            })
+            }, { once: true });
         }
         myGrid.appendChild(appendMyCell);
     }
