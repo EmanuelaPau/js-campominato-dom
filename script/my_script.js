@@ -59,3 +59,33 @@ function generateRandomNumber(maxNumber, minNumber) {
 }
 
 console.log(generateRandomNumber(5, 1));
+
+/**
+ * Function that generates random numbers all different between them
+ * @param {*} minNumber minimum number to generate
+ * @param {*} maxNumber maximum number to generate
+ * @param {*} elementsNumber number of elements to include to the list
+ * @returns a list of numbers all different 
+ */
+
+function getRandomUniqueNumber(minNumber, maxNumber, elementsNumber) {
+    // Add a array 
+    const numbersList = [];
+
+    // Check if the numbers i ask are more than the numbers possible 
+    if ((maxNumber - minNumber) < elementsNumber) {
+        return false;
+    }
+
+    while (numbersList.length < elementsNumber) {
+        const myNewRandomNumber = generateRandomNumber(minNumber, maxNumber);
+
+        if (!numbersList.includes(myNewRandomNumber)) {
+            numbersList.push(myNewRandomNumber);
+        }
+    }
+
+    return numbersList;
+}
+
+console.log(getRandomUniqueNumber(1, 20, 16));
