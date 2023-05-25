@@ -9,9 +9,9 @@ The rules of the game are a little easier than the old windows game minesweeper.
 To play the game you must select the difficulty, that can be hard (100 cells and 16 bombs), medium (81 cells and 8 bombs) or easy(49 cells and 5 bombs), and then push the smiley button.
 <br>
 <br>
-<img src="img/Screen-hard.png" width="300px">
-<img src="img/Screen-medium.png" width="300px">
-<img src="img/Screen-easy.png" width="300px">
+<img src="img/Screen-hard.png" width="250px">
+<img src="img/Screen-medium.png" width="250px">
+<img src="img/Screen-easy.png" width="250px">
 <br>
 <br>
 <ul>
@@ -21,7 +21,7 @@ To play the game you must select the difficulty, that can be hard (100 cells and
 </ul>
 <br>
 
-<img src="img/Screen-loose.png" width="300px">
-<img src="img/Screen-win.png" width="300px">
+<img src="img/Screen-loose.png" width="250px">
+<img src="img/Screen-win.png" width="250px">
 <br>
 <h3><strong>Have fun!</strong></h3>
