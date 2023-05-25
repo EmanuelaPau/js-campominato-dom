@@ -1,21 +1,24 @@
 header {
-    height: 100px;
+    height: 80px;
     width: 100%;
     padding: 20px;
 }
 
 main {
-    background-color: #7fffd4;
+    /* background-color: #7fffd4; */
     height: calc(100vh - 100px);
     width: 100%;
     padding: 20px;
     overflow: scroll;
+    /* background-image: url('../img/desktop-wallpaper-windows-98-green.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer {
-    height: 100px;
+    height: 60px;
     padding: 1rem 2rem;
-    font-size: 1.85rem;
+    font-size: 1.5rem;
 }
 
 footer p {
@@ -27,13 +30,32 @@ footer p a {
 }
 
 .my_title {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 
 img.boolean-logo {
-    width: 55px;
+    width: 40px;
 }
+
+.windows-app-container {
+    height: 720px;
+    width: 550px;
+    background-color: #d3cec4;
+}
+
+.windows-controls {
+    width: 100%;
+    height: 55px;
+    background-image: linear-gradient(to right, #20285a, #c8cfd1);
+    border: 5px solid #d3cec4;
+    color: white;
+}
+
+.windows-controls h3 {
+    font-weight: 300;
+}
+
 
 .playbutton {
     background-image: url(../img/minesweeper-smiley.png);
@@ -99,8 +121,8 @@ img.boolean-logo {
 }
 
 .minesweeper-container {
-    width: 650px;
-    padding: 15px 0;
+    width: 550px;
+    padding: 15px 15px;
     background-color: #c0c0c0;
     border: 5px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
@@ -115,8 +137,8 @@ img.boolean-logo {
 }
 
 .my_grid-container {
-    width: 615px;
-    height: 615px;
+    width: 500px;
+    height: 500px;
     border: 5px solid;
     border-color: #808080 #ffffff #ffffff #808080;
 }
@@ -141,8 +163,8 @@ div.grid .cell.easy {
 div.grid {
     /* background-color: #c0c0c0; */
     margin: 0 auto;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     /* background-color: blueviolet; */
 
 }
@@ -176,12 +198,12 @@ div.cell.selected {
     border-color: #828282;
 }
 
-div.cell.exploded {
-    background-color: red;
-}
-
-div.cell.mine {
+div.grid.game-over .exploded.mine {
     background-image: url(../img/mine.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+div.grid.game-over .exploded {
+    background-color: red;
 }

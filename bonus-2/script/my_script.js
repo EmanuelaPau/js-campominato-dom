@@ -62,21 +62,28 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
         appendMyCell.innerHTML = '<p> </p>';
         appendMyCell.classList.add(classToAdd);
 
+        if (myBombs.includes(i)) {
+            appendMyCell.classList.toggle('exploded');
+            appendMyCell.classList.toggle('mine');
+        }
+
         appendMyCell.addEventListener('click', function () {
 
             if (isBombUnexploded === true) {
                 yourScore = yourScore + 1;
 
                 if (myBombs.includes(i)) {
-                    appendMyCell.classList.toggle('exploded');
-                    appendMyCell.classList.toggle('mine');
+                    myGrid.classList.add('game-over')
+
                     yourScore = yourScore - 1;
                     console.log(`you lost, your score is: ${yourScore}`);
                     // appendMyCell.disabled = true;
                     displayBombs = true;
                     // console.log(displayBombs);
                     isBombUnexploded = false;
+
                     playButton.classList.add('dead-playbutton');
+
                 } else {
                     appendMyCell.classList.toggle('selected');
                 }
@@ -85,7 +92,6 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
                     console.log(`you won, your score is: ${yourScore}`);
                     isBombUnexploded = false;
                 }
-
 
             }
 

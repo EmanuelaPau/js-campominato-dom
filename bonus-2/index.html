@@ -28,41 +28,49 @@
     <body>
         <header class="d-flex justify-content-between align-items-center ">
                 <div class="d-flex align-items-center">
-                    <img class="boolean-logo me-4" src="img/Logo.png" alt="Boolean logo">
+                    <img class="boolean-logo me-3" src="img/Logo.png" alt="Boolean logo">
                     <h1  class="my_title">Campo Minato</h1>
                 </div>
         </header>
         <main class="my_main d-flex justify-content-center align-items-center">
-            <div class="minesweeper-container d-flex justify-content-center flex-wrap">
-                <div class="my_minesweeper-header d-flex flex-wrap justify-content-between align-items-center">
-                    <div class="my_points-container d-flex align-items-center justify-content-center">
-                        <p class="my_points" >
-                            000
-                        </p>
-                        <span id="your-points-text">00</span>
+            <div class="windows-app-container d-flex flex-wrap flex-column justify-content-between">
+                <div class="windows-controls d-block flex-wrap justify-content-between ">
+                    <div>
+                        <img src="" alt="">
+                        <h3>Minesweeper</h3>
                     </div>
-                    <button class="playbutton"></button>
-                    <div class="custom-select my_selection-container">
-                        <select class="select-difficulty">
-                          <option value="0">Select difficulty:</option>
-                          <option class="difficulty-hard" value="1">Hard</option>
-                          <option class="difficulty-medium" value="2">Medium</option>
-                          <option class="difficulty-easy" value="3">Easy</option>
-                        </select>
-                      </div>
-                </div>
-                <div class="my_grid-container d-flex align-items-center justify-content-between">
-                    <div id="my_grid" class="grid d-flex flex-wrap">
 
+                </div>
+                <div class="minesweeper-container d-flex justify-content-center flex-wrap">
+                    <div class="my_minesweeper-header d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="my_points-container d-flex align-items-center justify-content-center">
+                            <p class="my_points" >
+                                000
+                            </p>
+                            <span id="your-points-text">00</span>
+                        </div>
+                        <button class="playbutton"></button>
+                        <div class="custom-select my_selection-container">
+                            <select class="select-difficulty">
+                              <option class="difficulty-hard" value="1">Hard</option>
+                              <option class="difficulty-medium" value="2">Medium</option>
+                              <option class="difficulty-easy" value="3">Easy</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="my_grid-container d-flex align-items-center justify-content-between">
+                        <div id="my_grid" class="grid d-flex flex-wrap">
+    
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
-        <!-- <footer>
+        <footer>
             <p>
                 Made with &hearts; by <a href="#">Boolean</a>
             </p>
-        </footer> -->
+        </footer>
         <!-- JS  -->
         <script type="text/javascript" src="script/my_script.js"></script>
     </body>
