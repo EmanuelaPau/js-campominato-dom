@@ -94,6 +94,7 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
                 if (yourScore >= maxNumber - elementsNumber) {
                     console.log(`you won, your score is: ${yourScore}`);
                     isBombUnexploded = false;
+                    playButton.classList.add('win-playbutton');
                 }
 
             }

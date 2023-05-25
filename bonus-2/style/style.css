@@ -2,6 +2,7 @@ header {
     height: 80px;
     width: 100%;
     padding: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 main {
@@ -9,7 +10,7 @@ main {
     height: calc(100vh - 100px);
     width: 100%;
     padding: 20px;
-    overflow: scroll;
+    /* overflow: scroll;  */
     background-image: url('../img/desktop-wallpaper-windows-98-green.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,6 +101,12 @@ img.boolean-logo {
 }
 
 .playbutton:active {
+    background-image: url(../img/minesweeper-sunglasses.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.win-playbutton {
     background-image: url(../img/minesweeper-sunglasses.png);
     background-repeat: no-repeat;
     background-size: cover;
