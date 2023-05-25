@@ -10,7 +10,7 @@ main {
     width: 100%;
     padding: 20px;
     overflow: scroll;
-    /* background-image: url('../img/desktop-wallpaper-windows-98-green.jpg'); */
+    background-image: url('../img/desktop-wallpaper-windows-98-green.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -50,12 +50,36 @@ img.boolean-logo {
     background-image: linear-gradient(to right, #20285a, #c8cfd1);
     border: 5px solid #d3cec4;
     color: white;
+    padding: 5px;
 }
 
 .windows-controls h3 {
     font-weight: 300;
 }
 
+.windows-app-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.square-control {
+    background-color: #d3cec4;
+    width: 33px;
+    height: 33px;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.square-control:active {
+    background-color: #c0c0c0;
+}
+
+.windows-app-container div a {
+    color: black;
+    margin-left: 8px;
+}
 
 .playbutton {
     background-image: url(../img/minesweeper-smiley.png);
