@@ -12,6 +12,7 @@ function startNewGame() {
     let resetTextPoints = document.getElementById('your-points-text');
 
     playButton.classList.remove('dead-playbutton');
+
     resetTextPoints.innerHTML = 00;
     // yourTextPoints.innerHTML = 00;
 
@@ -43,6 +44,8 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
     const myGrid = document.getElementById('my_grid');
     // reset 
     myGrid.innerHTML = "";
+    // reset gameover 
+    myGrid.classList.remove('game-over');
 
     // Add bombs 
     let myBombs = getRandomUniqueNumber(minNumber, maxNumber, elementsNumber);
@@ -63,8 +66,8 @@ function createGridElement(minNumber, maxNumber, elementsNumber, classToAdd) {
         appendMyCell.classList.add(classToAdd);
 
         if (myBombs.includes(i)) {
-            appendMyCell.classList.toggle('exploded');
-            appendMyCell.classList.toggle('mine');
+            appendMyCell.classList.add('exploded');
+            appendMyCell.classList.add('mine');
         }
 
         appendMyCell.addEventListener('click', function () {
